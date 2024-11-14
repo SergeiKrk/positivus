@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name1": "SEO",
+    "name2": "оптимизация",
+    "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "arrow": "./services/ag.svg",
+    "link": "./",
+    "image": "./services/01.svg"
+  },
+  {
+    "id": 2,
+    "name1": "Контекстная реклама",
+    "name2": "с оплатой за конверсии",
+    "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "arrow": "./services/ag.svg",
+    "link": "./",
+    "image": "./services/02.svg"
+  },
+  {
+    "id": 3,
+    "name1": "Продвижение",
+    "name2": "в соцсетях",
+    "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
+    "arrow": "./services/aw.svg",
+    "link": "./",
+    "image": "./services/03.svg"
+  },
+  {
+    "id": 4,
+    "name1": "Email",
+    "name2": "Маркетинг",
+    "background": "h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "arrow": "./services/ag.svg",
+    "link": "./",
+    "image": "./services/04.svg"
+  },
+  {
+    "id": 5,
+    "name1": "Создание контента",
+    "name2": "под ключ",
+    "background": "h-[310px] p-12 bg-lime rounded-[45px] shadow-card border border-black justify-between items-center flex text-black",
+    "arrow": "./services/ag.svg",
+    "link": "./",
+    "image": "./services/05.svg"
+  },
+  {
+    "id": 6,
+    "name1": "Поддержка",
+    "name2": "и аналитика",
+    "background": "h-[310px] p-12 bg-black rounded-[45px] shadow-card border border-black justify-between items-center flex text-white",
+    "arrow": "./services/aw.svg",
+    "link": "./",
+    "image": "./services/06.svg"
+  }
+]
