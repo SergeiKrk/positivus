@@ -15,18 +15,46 @@ import { Image } from "astro:assets";
 
 const steps = [
     {
-        id: 0,
+        id: 1,
         name1: 'Знакомство',
 		name2: 'Присылаете мне в tg имя, которое используете в аккаунте Авито',
 		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
         image: tghello,
     },
     {
-        id: 1,
+        id: 2,
         name1: 'Поиск в Avito',
-		name2: 'Выбираете указанное в задании название населенного пункта в поиске Авито и вводите указанный поисковый запрос',
+		name2: 'Выбрать указанное в задании название населенного пункта в поиске Авито, ввести указанный поисковый запрос.',
 		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
         image: SearchImg,
+    },
+    {
+        id: 3,
+        name1: 'Просмотр объявления',
+		name2: 'Найти объявление указанной компании, перейти в объявление, изучить его и добавить в избранное. Сделать СКРИН.',
+		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
+        image: AvitoImg,
+    },
+    {
+        id: 4,
+        name1: 'Онлайн-заявка',
+		name2: 'Записаться на обслуживание через "Онлайн-запись" на следующий день на любое время. Дождаться, пока исполнитель (оператор  указанной компании) подтвердит заказ, написать ему адрес (любой, посмотреть на карте Москвы или МО). Сделать второй СКРИН',
+		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
+        image: ZyavkaImg,
+    },
+    {
+        id: 5,
+        name1: 'Оставить отзыв',
+		name2: 'Дождаться, когда после времени исполнения от Авито придет сообщение, чтобы оставить отзыв. Написать положительный отзыв по теме объявления длиной от 130 символов, поставить 5 звёзд. Сделать СКРИН.',
+		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
+        image: OtzivihImg,
+    },
+    {
+        id: 6,
+        name1: 'Получить оплату',
+		name2: 'Отправить мне в tg скрины по выполненному заданию и написать номер, по которому через СПБ я переведу Вам 200р. за работу.',
+		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
+        image: OplataImg,
     },
 ]
 ---
@@ -61,8 +89,8 @@ const steps = [
                     <div class="relative inline-block my-auto ml-4">ШАГ</div>
                     </div>
             </div>
-            <div class="w-[150px] h-[150px] pt-0.5 pb-[1.95px] justify-center items-center flex">
-                <Image  class="hidden md:block" src={image}  alt={name1}/>
+            <div class="w-[250px] h-[150px] pt-0.5 pb-[1.95px] justify-center items-center flex">
+                <Image  class="hidden md:block" src={image}  alt={name1} width={150} height={150}/>
             </div>
         </div>
         ))
@@ -78,7 +106,7 @@ const steps = [
             <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
                 <div class="text-3xl font-medium">Давайте уже начнем!</div>
                 <div class="text-lg font-normal">Чтобы получить оплачиваемое задание, тык 👇 на кнопку ниже.</div>
-                <a href="/" class="px-[35px] py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] justify-start items-start gap-2.5 inline-flex">
+                <a href="https://t.me/Mikrobfin" class="px-[35px] py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] justify-start items-start gap-2.5 inline-flex">
                     <div class="text-center text-xl font-normal leading-7">Получить задание</div>
                 </a>
             </div>
