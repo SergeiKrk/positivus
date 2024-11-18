@@ -1,0 +1,121 @@
+---
+import { Image } from "astro:assets"
+import Container from "./Container.astro"
+import HeroImg from "../img/Hero.avif"
+import AvitoImg from "../img/avito.png"
+import SearchImg from "../img/Search.png"
+import ZyavkaImg from "../img/zayavka.png"
+import OtzivihImg from "../img/otzivi.png"
+import OplataImg from "../img/oplata.png"
+import FingerImg from "../img/finger.webp"
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const link = '/steps'
+
+const items = [
+    {
+        alt: 'Avito',
+		image: AvitoImg,
+		imageWidth: AvitoImg.width,
+		imageHeight: AvitoImg.height,
+        class: 'h-12 w-auto mx-auto bg-[#94FF57] rounded-lg'
+    },
+    {
+        alt: 'далее',
+		image: FingerImg,
+		imageWidth: FingerImg.width,
+		imageHeight: FingerImg.height,
+        class: 'h-12 w-auto mx-auto hidden md:block'
+    },
+    {
+        alt: 'Поиск Авито',
+		image: SearchImg,
+		imageWidth: SearchImg.width,
+		imageHeight: SearchImg.height,
+        class: 'h-12 w-auto mx-auto bg-[#94FF57] rounded-lg'
+    },
+    {
+        alt: 'далее',
+		image: FingerImg,
+		imageWidth: FingerImg.width,
+		imageHeight: FingerImg.height,
+        class: 'h-12 w-auto mx-auto hidden md:block'
+    },
+    {
+        alt: 'Онлайн-заявка',
+		image: ZyavkaImg,
+		imageWidth: ZyavkaImg.width,
+		imageHeight: ZyavkaImg.height,
+        class: 'h-12 w-auto mx-auto bg-[#94FF57] rounded-lg'
+    },
+    {
+        alt: 'далее',
+		image: FingerImg,
+		imageWidth: FingerImg.width,
+		imageHeight: FingerImg.height,
+        class: 'h-12 w-auto mx-auto hidden md:block'
+    },
+    {
+        alt: 'Оставить отзыв',
+		image: OtzivihImg,
+		imageWidth: OtzivihImg.width,
+		imageHeight: OtzivihImg.height,
+        class: 'h-12 w-auto mx-auto bg-[#94FF57] rounded-lg'
+    },
+    {
+        alt: 'далее',
+		image: FingerImg,
+		imageWidth: FingerImg.width,
+		imageHeight: FingerImg.height,
+        class: 'h-12 w-auto mx-auto hidden md:block'
+    },
+    {
+        alt: 'Получить оплату',
+		image: OplataImg,
+		imageWidth: OplataImg.width,
+		imageHeight: OplataImg.height,
+        class: 'h-12 w-auto mx-auto bg-[#94FF57] rounded-lg'
+    },
+]
+---
+<Container>
+<div class="relative flex flex-col-reverse items-center md:flex-row" id="hero">
+    <div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
+        <div class="text-left space-y-3">
+            <div class="mb-8 text-4xl md:text-5xl md:text-left text-center">Привет 👋</div>
+            <h1 class="text-4xl leading-normal font-medium md:text-6xl md:leading-normal text-center md:text-left">Куплю Ваш <br> <span class="bg-primary">отзыв на Авито</span> <br>за 200 р.</h1>
+            <p class="mb-6  text-xl font-normal leading-7 sm:mb-12 text-center md:text-left mt-12">Интересно?</p>
+            <p class="mt-6 mb-10  text-xl font-normal leading-7 sm:mb-12 text-center md:text-left">Тык 👇 на кнопку.</p>
+            
+                <div class="w-full justify-center md:justify-start items-center inline-flex">
+                    <a href={link} class="px-8 py-5 bg-zinc-900 hover:bg-white rounded-2xl text-center text-white hover:text-black border text-xl font-normal leading-7">Интересно
+                    </a>
+                </div>
+        </div>
+    </div>
+    <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
+        <Image src={HeroImg} alt="Hero"/>
+    </div>
+</div>
+
+<div class="flex-row items-center mb-32">
+    <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 2xl:grid-cols-9">
+        {
+            items.map((item,key) => {
+              return (
+                <div class="p-4 transition duration-200 hover:grayscale-0">
+                    <Image 
+                        src={item.image}
+                        class={item.class}
+                        alt={item.alt} 
+                        format="avif" 
+                        width={item.imageWidth} 
+                        height={item.imageHeight} 
+                    />
+                </div>
+              )
+            })
+          }
+    </div>
+</div>
+</Container>

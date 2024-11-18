@@ -1,19 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import Services from "../components/Services.astro"
-import Team from '../components/Team.astro';
-import Testimonial from '../components/Testimonial.astro';
-import Contact from '../components/Contact.astro';
-import Case from '../components/Case.astro';
+import HeroAvi from '../components/HeroAvi.astro';
+const link = 'steps'
 ---
 <!-- POSITIVUS Official Astro theme -->
 <Layout title="Positivus">
 	<main class="space-y-20">
-		<Hero/>
-		<Services/>
-		<Case/>
-		<Team/>
-		<Testimonial/>
+		<HeroAvi link={link}/>
 	</main>
 </Layout>

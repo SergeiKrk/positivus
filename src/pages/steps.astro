@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import StepByStep from '../components/StepByStep.astro';
+const { link } = Astro.props
+---
+<!-- POSITIVUS Official Astro theme -->
+<Layout title="get steps">
+	<main class="space-y-20">
+		<StepByStep link={link}/>
+	</main>
+</Layout>

@@ -1,0 +1,91 @@
+---
+import Container from "./Container.astro"
+import Topic from "./Topic.astro";
+import servicesData from './Data/steps.json';
+
+import AvitoImg from "../img/avito.png"
+import ag from "../img/ag.svg"
+import SearchImg from "../img/Search.png"
+import tghello from "../img/tghello.png"
+import ZyavkaImg from "../img/zayavka.png"
+import OtzivihImg from "../img/otzivi.png"
+import OplataImg from "../img/oplata.png"
+import FingerImg from "../img/finger.webp"
+import { Image } from "astro:assets";
+
+const steps = [
+    {
+        id: 0,
+        name1: 'Знакомство',
+		name2: 'Присылаете мне в tg имя, которое используете в аккаунте Авито',
+		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
+        image: tghello,
+    },
+    {
+        id: 1,
+        name1: 'Поиск в Avito',
+		name2: 'Выбираете указанное в задании название населенного пункта в поиске Авито и вводите указанный поисковый запрос',
+		background: 'h-[310px] p-12 bg-zinc-100 rounded-[45px] shadow-card border border-black justify-between items-center flex text-black',
+        image: SearchImg,
+    },
+]
+---
+<Container>
+<div class="relative flex flex-col items-center md:flex-row" id="services">
+    <Topic title="Вот что нужно делать" description="Пошаговая схема наших взаимодействий:">
+</div>
+
+
+<div class="flex-row items-center py-5">
+    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- card start-->
+        {
+        steps.map(({ background, name1, name2, image, id} ) => (
+        <div class={background}>
+            <div class="flex-col justify-center items-start gap-[20px] inline-flex">
+                <div class="inline-block">
+                    <div class="px-[7px] bg-lime-300 rounded-[7px] flex-col justify-start items-start gap-2.5 flex">
+                        <div class=" text-3xl font-medium">{name1}</div>
+                    </div>
+                    <div class="px-[7px] bg-lime-300 rounded-[7px] flex-col justify-start items-start gap-2.5 flex">
+                        <div class="text-lg font-medium">{name2}</div>
+                    </div>
+                </div>
+                    <div class="flex flex-row">
+                        <div class="relative">
+                        <div class="flex items-center justify-center w-16 h-16 mx-auto border-2 border-gray-200 rounded-full shadow">
+                                <span class="text-xl font-semibold text-gray-700">{id}</span>
+                        </div>
+                    </div>
+                    <div class="relative inline-block my-auto ml-4">ШАГ</div>
+                    </div>
+            </div>
+            <div class="w-[150px] h-[150px] pt-0.5 pb-[1.95px] justify-center items-center flex">
+                <Image  class="hidden md:block" src={image}  alt={name1}/>
+            </div>
+        </div>
+        ))
+        }
+        <!-- card end-->
+    </div>
+</div>
+
+
+<div class="flex-row items-center my-6 p-14 bg-zinc-100 rounded-[45px]">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="justify-start items-center gap-[275px] flex">
+            <div class="flex-col justify-start items-start gap-[26px] inline-flex text-black">
+                <div class="text-3xl font-medium">Давайте уже начнем!</div>
+                <div class="text-lg font-normal">Чтобы получить оплачиваемое задание, тык 👇 на кнопку ниже.</div>
+                <a href="/" class="px-[35px] py-5 bg-zinc-900 hover:bg-white text-white hover:text-black border rounded-[14px] justify-start items-start gap-2.5 inline-flex">
+                    <div class="text-center text-xl font-normal leading-7">Получить задание</div>
+                </a>
+            </div>
+        </div>
+        <div class="hidden md:grid justify-items-center -m-20">
+            <img src="/services/Illustration.svg" width="50%" alt="cat"/>
+        </div>
+    </div>
+</div>
+</Container>
